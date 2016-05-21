@@ -1,0 +1,61 @@
+*503-000-A08 016 - Proof of Concept_02_3_Draft_Document.docx
+*503-000-A08.021 - Accounting NPDA Financial Model01_1.docx
+*503-000-A08 022 - General_Ledger_Contra_Entries_Processing_01_3_Draft_Do.._.docx
+*503-000-A08 022 - Workflow Screens_01_1_Draft_Document.docx
+*503-100-C-FRS-Day-Month-Year-Closing-V1.docx
+*503-100-C-FRS-OpeningBalances-V2.docx
+All Financial Accounting System Processes_02_2.vsdx
+All Financial Accounting System Processes_02_Exceptions_Processes.vsdx
+DCM-chart-of-accounts-and-reporting.xls
+DCM Process Mapping Stencil.vssx
+Exception_GL_Entries_02.vsdx
+Exception_Workflow_Processes_00_POC.vsdx
+Exception_Workflow_Processes_02_POC_2.vsdx
+Exception_Workflow_Processes_02_POC.vsdx
+Exception_Workflow_Processes_03_POC.vsdx
+GL Entries for Development.vsdx
+
+Journaling Rules:
+-----------------
+-Successfull Distribtion
+-Unidentified
+-Returns
+-Refund
+-Unlawful Withdrawl
+-Deallocation
+-Reallocation
+-Double Payments
+-Reversal
+
+Chart of Accounts:
+-Assets:
+--Bank 1
+--Bank 2
+--Bank 3
+--Bank 4
+--Bank 5
+--Unidentified Bank Account
+--Interest Bank Account
+-Liabilities:
+--Bank Clearing 1
+--Bank Clearing 2
+--Bank Clearing 3
+--Bank Clearing 4
+--Bank Clearing 5
+--Unidentified Control (+7 days)
+--Unidentified Control (+7 days positive)
+--Unidentified Control (+7 days negative)
+--Unlawful Debit Orders
+--Bank Charges
+--Consumer Control
+---Consumer x
+--Unidentified Creditor Refund
+--Interest Received
+--Creditor Control
+--DC Fees x
+--Legal Fees
+---Attorney x
+--NPDA Fees
+--Debit Order Collection Control
+--Payment Run Control
+
