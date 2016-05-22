@@ -24,6 +24,10 @@ public class TransactionLegEntity {
 
     @NotNull
     @Length(min = 1, max = 80)
+    private String accountReference;
+
+    @NotNull
+    @Length(min = 1, max = 80)
     private String transactionReference;
 
     @NotNull
@@ -47,6 +51,14 @@ public class TransactionLegEntity {
 
     public void setClientReference(String clientReference) {
         this.clientReference = clientReference;
+    }
+
+    public String getAccountReference() {
+        return accountReference;
+    }
+
+    public void setAccountReference(String accountReference) {
+        this.accountReference = accountReference;
     }
 
     public String getTransactionReference() {

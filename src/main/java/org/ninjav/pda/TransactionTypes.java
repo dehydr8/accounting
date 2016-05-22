@@ -6,5 +6,5 @@ package org.ninjav.pda;
 public class TransactionTypes {
     public static final String DEPOSIT = "Deposit";
     public static final String WITHDRAWL = "Wthdrawl";
-    public static final String DISTRIBUTION = "Distribution";
+    public static final String DISTRIBUTION = "DistributionEntity";
 }

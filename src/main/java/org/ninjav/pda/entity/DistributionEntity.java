@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
  * Created by ninjav on 2016/05/09.
  */
 @Entity
-public class Distribution {
+public class DistributionEntity {
     @Id
     @GeneratedValue
     private Long id;

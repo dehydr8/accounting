@@ -13,9 +13,8 @@ public class JpaClientDao implements ClientDao {
 
     private EntityManager em;
 
-    private TimeSource time;
-
     public JpaClientDao(EntityManager em) {
+
         this.em = em;
     }
 
@@ -23,7 +22,7 @@ public class JpaClientDao implements ClientDao {
     public void createClient(String clientRef, Date creationDate) {
         ClientEntity c = new ClientEntity();
         c.setReference(clientRef);
-        c.setCreationDate(time.now());
+        c.setCreationDate(creationDate);
         em.persist(c);
     }
 

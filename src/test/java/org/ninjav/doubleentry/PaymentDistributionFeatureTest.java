@@ -102,12 +102,12 @@ public class PaymentDistributionFeatureTest {
         Assert.assertEquals(1, t2.size());
 
         //------------------------------------------------------------------------------------------------------------
-        // Stage 2 - Distribution
+        // Stage 2 - DistributionEntity
         //------------------------------------------------------------------------------------------------------------
 
         // Distrbution engine sees Pieie has money for Edgars
         transferService.transferFunds(TransferRequest.builder()
-                .reference("T2").type("Distribution")
+                .reference("T2").type("DistributionEntity")
                 .account(PIETIE).amount(toMoney("-100.00", "ZAR"))
                 .account(PIETIE_EDGARS_DISTRIBUTING).amount(toMoney("100.00", "ZAR"))
                 .build());
@@ -145,7 +145,7 @@ public class PaymentDistributionFeatureTest {
         List<Transaction> t6 = transferService.findTransactionsByAccountRef(PIETIE_EDGARS_DISTRIBUTING);
         Assert.assertEquals(2, t6.size());
 
-        // Edgars Distribution account has 1 transaction
+        // Edgars DistributionEntity account has 1 transaction
         List<Transaction> t7 = transferService.findTransactionsByAccountRef(EDGARS_DISTRIBUTING);
         Assert.assertEquals(1, t7.size());
 
@@ -188,7 +188,7 @@ public class PaymentDistributionFeatureTest {
         accountService.createAccount(PDA_LOANS, toMoney("0.00", "ZAR"));
 
         //------------------------------------------------------------------------------------------------------------
-        // Stage 2 - Distribution
+        // Stage 2 - DistributionEntity
         //------------------------------------------------------------------------------------------------------------
 
         // Pietie pays Edgars 100, but only has 50 to pay, so NPDA borrows pietie money
@@ -229,13 +229,13 @@ public class PaymentDistributionFeatureTest {
 
         // The payment engine distributes funds for each consumer to creditors
         transferService.transferFunds(TransferRequest.builder()
-                .reference("T1").type("Distribution")
+                .reference("T1").type("DistributionEntity")
                 .account(PIETIE).amount(toMoney("-100.00", "ZAR"))
                 .account(PIETIE_EDGARS_DISTRIBUTING).amount(toMoney("100.00", "ZAR"))
                 .build());
 
         transferService.transferFunds(TransferRequest.builder()
-                .reference("T2").type("Distribution")
+                .reference("T2").type("DistributionEntity")
                 .account(SANNIE).amount(toMoney("-50.00", "ZAR"))
                 .account(SANNIE_EDGARS).amount(toMoney("50.00", "ZAR"))
                 .build());

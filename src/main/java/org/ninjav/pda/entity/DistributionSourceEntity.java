@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  * Created by ninjav on 2016/05/09.
  */
 @Entity
-public class DistributionSource {
+public class DistributionSourceEntity {
     @Id
     @GeneratedValue
     private Long id;
@@ -24,7 +24,7 @@ public class DistributionSource {
 
     @ManyToOne
     @JoinColumn(name = "distributionId", nullable=false, updatable=false)
-    private Distribution distribution;
+    private DistributionEntity distribution;
 
     public Long getId() {
         return id;
@@ -50,11 +50,11 @@ public class DistributionSource {
         this.amount = amount;
     }
 
-    public Distribution getDistribution() {
+    public DistributionEntity getDistribution() {
         return distribution;
     }
 
-    public void setDistribution(Distribution distribution) {
+    public void setDistribution(DistributionEntity distribution) {
         this.distribution = distribution;
     }
 }
