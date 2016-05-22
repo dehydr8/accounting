@@ -3,7 +3,9 @@
 
 docker run \
 	--name accounting-data \
-	-v $PWD:/var/lib/mysql \
+	--net=host \
+	-v $PWD/data/:/var/lib/mysql/ \
+	-v $PWD/ddl/:/docker-entrypoint-initdb.d/ \
 	-e MYSQL_ROOT_PASSWORD=wopniep \
 	-e MYSQL_DATABASE=accounting \
 	-e MYSQL_USER=ninjav \
